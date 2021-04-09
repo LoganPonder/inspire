@@ -1,0 +1,42 @@
+@import "./_variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./_overrides.scss";
+@import "./custom.scss";
+@import "./loaders.scss";
+
+* {
+  outline: 2px solid red;
+}
+
+body {
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $body-bg;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  flex-grow: 1;
+}
+
+// .background-image {
+//   z-index: -1;
+//   position: absolute;
+//   background-position: center;
+//   background-size: cover;
+//   top: 0;
+//   left: 0;
+// }
+
+#clock {
+  font-family: 'Orbitron', sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+
