@@ -39,4 +39,12 @@ export default class TodosController {
       console.error(error);
     }
   }
+
+  async deleteTodo(id) {
+    try {
+      await todosService.deleteTodo(id);
+    }catch(error) {
+      console.error(error);
+    }
+  }
 }

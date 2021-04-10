@@ -10710,4 +10710,8 @@ main {
   text-align: center;
 }
 
+i {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=main.css.map */

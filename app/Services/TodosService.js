@@ -9,8 +9,17 @@ class TodosService {
   }
 
   async addTodo(newTodo) {
-    let res = await todoApi.post('', newTodo)
+    let res = await todoApi.post('/', newTodo)
     ProxyState.todos = [...ProxyState.todos, new Todo(res.data)];
+  }
+
+  async deleteTodo(id) {
+    // console.log(ProxyState.todos);
+    let todo = ProxyState.todos.find(t => t.id == id);
+    console.log(todo);
+    await todoApi.delete(todo.id);
+    console.log('hi, delete service');
+    ProxyState.todos = ProxyState.todos.filter(t => t.id != id);
   }
 }
 
