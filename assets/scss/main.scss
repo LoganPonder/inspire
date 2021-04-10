@@ -18,6 +18,7 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-blend-mode: darken;
 }
 
 main {
@@ -41,6 +42,10 @@ main {
 
 i {
  cursor: pointer; 
+}
+
+.temp:hover {
+  cursor: pointer;
 }
 
 

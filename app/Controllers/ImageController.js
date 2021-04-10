@@ -5,6 +5,7 @@ import { imageService } from "../Services/ImageService.js";
 function _draw() {
   let image = ProxyState.image;
   document.body.style.backgroundImage = `url(${image.url})`;
+  document.getElementById('image-info').innerHTML = image.Template;
 }
 
 //Public

@@ -7,6 +7,11 @@ class WeatherService {
     let res = await weatherApi.get();
     ProxyState.weather = new Weather(res.data);
   }
+
+  changeTemp() {
+    ProxyState.weather.checked = !ProxyState.weather.checked;
+    ProxyState.weather = ProxyState.weather;
+  }
 }
 
 export const weatherService = new WeatherService();

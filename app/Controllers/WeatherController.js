@@ -22,6 +22,10 @@ export default class WeatherController {
           console.error(error);
       }
   }
+
+  changeTemp() {
+    weatherService.changeTemp();
+  }
 }
 
 function currentTime() {

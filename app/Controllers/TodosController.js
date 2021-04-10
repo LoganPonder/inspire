@@ -7,6 +7,7 @@ function _draw() {
   let template = '';
   todos.forEach(t => template += t.Template)
   document.getElementById('todo-list').innerHTML = template;
+  document.getElementById('todo-total').innerHTML = `${ProxyState.todos.filter(t => t.completed).length}/${ProxyState.todos.length}`;
 }
 
 //Public
