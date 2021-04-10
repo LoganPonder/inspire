@@ -14,12 +14,18 @@ class TodosService {
   }
 
   async deleteTodo(id) {
-    // console.log(ProxyState.todos);
+    let todo = ProxyState.todos.find(t => t.id == id);
+    await todoApi.delete(todo.id);
+    ProxyState.todos = ProxyState.todos.filter(t => t.id != id);
+  }
+
+  async toggle(id) {
     let todo = ProxyState.todos.find(t => t.id == id);
     console.log(todo);
-    await todoApi.delete(todo.id);
-    console.log('hi, delete service');
-    ProxyState.todos = ProxyState.todos.filter(t => t.id != id);
+    todo.completed = !todo.completed;
+    let res = await todoApi.put(todo.id, todo)
+    console.log(res.data);
+    todo = res.data;
   }
 }
 

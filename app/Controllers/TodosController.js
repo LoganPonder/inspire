@@ -47,4 +47,12 @@ export default class TodosController {
       console.error(error);
     }
   }
+
+  async toggle(id) {
+    try {
+      await todosService.toggle(id);
+    } catch(error) {
+      console.error(error);
+    }
+  }
 }
