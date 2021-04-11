@@ -10684,10 +10684,6 @@ h3 {
     left: 100%;
   }
 }
-* {
-  outline: 2px solid red;
-}
-
 body {
   display: flex;
   color: #fff;
@@ -10699,10 +10695,42 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: darken;
+  font-family: "Montserrat", sans-serif;
 }
 
 main {
   flex-grow: 1;
+}
+
+.black-background {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  color: #fff;
+}
+
+.greeting {
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+.quote-content {
+  font-size: 1.6rem;
+}
+
+.quote-author {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+.seven {
+  font-weight: 700;
+}
+
+.main-font {
+  font-family: "Quicksand", sans-serif !important;
+}
+
+.secondary-font {
+  font-family: "Montserrat", sans-serif !important;
 }
 
 #clock {
@@ -10713,10 +10741,37 @@ main {
 
 i {
   cursor: pointer;
+  font-size: 1.5rem;
 }
 
 .temp:hover {
   cursor: pointer;
+}
+
+.quote-content:hover {
+  cursor: pointer;
+}
+
+.quote-author {
+  opacity: 0;
+}
+
+.todo-item {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.quote-content:hover + small {
+  animation: show 2s ease-in-out forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

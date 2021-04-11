@@ -9,9 +9,9 @@ export default class Weather {
 // go back to here
   get Template() {
     return /*html*/ `
-        <div class="">
-        <h4 onclick="app.weatherController.changeTemp()" class="temp display-2" id="temp">${this.checked ? this.fahrenheit : this.celsius}°</h4>
-            <h6 class="display-4">${this.city}</h6>
+        <div class="pr-0">
+        <h4 onclick="app.weatherController.changeTemp()" class="temp display-2 mb-0" id="temp">${this.checked ? this.fahrenheit : this.celsius}°</h4>
+            <p class="display-4 pt-0 mt-0">${this.city}</p>
         </div>
         `;
   }

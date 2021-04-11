@@ -7,8 +7,8 @@ export default class Quote {
   get Template() {
     return /*html*/ `
         <div class="p-2">
-            <p class="lead">${this.content}</p>
-            <small>${this.author}</small>
+            <p class="lead quote-content">${this.content}</p>
+            <small class="quote-author font-italic">-${this.author}</small>
         </div>
         `;
   }
