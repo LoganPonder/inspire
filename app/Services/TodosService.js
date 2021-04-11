@@ -22,8 +22,7 @@ class TodosService {
   async toggle(id) {
     let todo = ProxyState.todos.find(t => t.id == id);
     todo.completed = !todo.completed;
-    let res = await todoApi.put(todo.id, todo)
-    // todo = res.data;
+    await todoApi.put(todo.id, todo)
     ProxyState.todos = ProxyState.todos;
   }
 }

@@ -31,7 +31,7 @@
         <div class="row justify-content-end">
             <div class="col text-center">
                 <div class="clock-content">
-                    <h1 class="display-1 seven text-shadow" id="clock">CLOCK</h1>
+                    <h1 class="display-1" id="clock"></h1>
                     <p class="display-1 greeting">Good Morning, Logan</p>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <!-- TODO -->
-            <div class="col-md-3 black-background text-center rounded py-3 shadow">
+            <div class="col-md-3 black-background text-center rounded pt-3 pb-1 shadow">
                 <h3>Today's Objectives</h3>
                 <p id="todo-total"></p>
                 <hr>
@@ -61,13 +61,14 @@
                     <form class="form-inline d-flex justify-content-center" onsubmit="app.todosController.addTodo()">
                         <div class="form-group mb-2">
                             <label for="description" class=""></label>
-                            <input type="text" class="bg-light mr-2 border-0 rounded p-2 shadow" id="description"  name="description" placeholder="New todo...">
+                            <input type="text" class="bg-light mr-2 border-0 rounded p-2 shadow" maxlength="10" id="description"  name="description" placeholder="New todo...">
                         </div>
                         <button type="submit" class="btn btn-dark mb-2 shadow">Add Todo</button>
                     </form>
             </div>
         </div>
     </main>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js" integrity="sha512-otOZr2EcknK9a5aa3BbMR9XOjYKtxxscwyRHN6zmdXuRfJ5uApkHB7cz1laWk2g8RKLzV9qv/fl3RPwfCuoxHQ==" crossorigin="anonymous"></script>
     <script src="app/main.js" type="module"></script>
 </body>

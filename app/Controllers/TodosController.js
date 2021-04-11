@@ -1,5 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { todosService } from "../Services/TodosService.js";
+import NotificationService from '../Services/NotificationService.js';
 
 //Private
 function _draw() {
@@ -36,6 +37,7 @@ export default class TodosController {
     form.reset();
     try {
       await todosService.addTodo(newTodo);
+      NotificationService.toast(' Todo Added!');
     } catch(error) {
       console.error(error);
     }

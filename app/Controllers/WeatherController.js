@@ -34,8 +34,9 @@ function currentTime() {
   var min = date.getMinutes();
   hour = updateTime(hour);
   min = updateTime(min);
-  document.getElementById("clock").innerText = hour + " : " + min; /* adding time to the div */
+  document.getElementById("clock").innerText = hour + ":" + min; /* adding time to the div */
     var t = setTimeout(function(){ currentTime() }, 1000); /* setting timer */
+    // go back to here  
 }
 function updateTime(k) {
   if (k < 10) {
